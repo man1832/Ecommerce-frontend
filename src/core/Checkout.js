@@ -4,8 +4,6 @@ import { emptyCart } from './cartHelpers';
 import Card from './Card';
 import { isauthenticate } from '../auth/index';
 import { Link, Redirect } from 'react-router-dom';
-// import "braintree-web"; // not using this package
-import DropIn from 'braintree-web-drop-in-react';
 
 const Checkout = ({ products, setRun = f => f, run = undefined }) => {
     const [data, setData] = useState({
@@ -32,7 +30,12 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
 
     const showCheckout = () => {
         return isauthenticate() ? (
-            <div></div>
+            <Link to="/">
+            <button className="btn btn-success btn-block" onClick={()=>emptyCart(()=>{})}
+             >
+               Place Order
+            </button>
+            </Link>
         ) : (
             <Link to="/signin">
                 <button className="btn btn-primary">Sign in to checkout</button>
@@ -40,20 +43,17 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
         );
     };
 
-    const showSuccess = () => (
-        <div className="alert alert-info" >
-            <Link to="/">
-            <button className="btn btn-success btn-block">
-               Place Order
-            </button>
-            </Link>
+    // const showSuccess = () => {
+    //     return !isauthenticate() ?
+    //     <div className="alert alert-info" >
             
-        </div>
-    );
+            
+    //     </div>
+    // }
     return (
         <div>
             <h2>Total: <i class="fa fa-inr"></i> {getTotal()}</h2>
-            {showSuccess()}
+            {/* {showSuccess()} */}
             {showCheckout()}
         </div>
     );
