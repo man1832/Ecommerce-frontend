@@ -99,7 +99,7 @@ const Shop = () => {
     return (
         <div className="container-fluid  mt-5">
             <div className="row pt-5">
-                <div className="col-lg-2 card h-50 ml-2">
+                <div className="col-lg-2 card h-50 ml-4">
                     <h4 className="pb-3 card-header">Filter by categories</h4>
                     <ul className="list-group list-group-flush pl-2 pb-2">
                         <Checkbox

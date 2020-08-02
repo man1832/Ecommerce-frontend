@@ -106,11 +106,13 @@ const Menu = ({ history }) => (
         </ul>
         <ul className="navbar-nav nav-flex-icons">
         <li className="nav-item">
-            <i className="fas fa-shopping-cart"></i>
+            <i className="fas fa-shopping-cart mr-2"></i>
         </li>
-        <li className="nav-item">
-          <a className="nav-link"></a>
-        </li>
+        {isauthenticate() && (
+                <li className="nav-item">
+                <h5>Signed in {isauthenticate().user.name}</h5>
+              </li>
+        )}
       </ul>
     </div>
 

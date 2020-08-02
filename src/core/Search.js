@@ -69,7 +69,7 @@ const Search = () => {
 
                 <div className="row">
                     {results.map((product, i) => (
-                        <div className="col-4 mb-3">
+                        <div className="col-lg-4 mb-3">
                             <Card key={i} product={product} />
                         </div>
                     ))}
@@ -91,8 +91,6 @@ const Search = () => {
                     />
                      
                 </div>
-                  
-                    {/* <button className="input-group-text">Search</button> */}
         </form>
     );
 
