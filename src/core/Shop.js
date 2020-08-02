@@ -4,6 +4,7 @@ import Card from "./Card";
 import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
+import Footers from './Footers'
 import { prices } from "./fixedPrices";
 
 const Shop = () => {
@@ -12,7 +13,7 @@ const Shop = () => {
     });
     const [categories, setCategories] = useState([]);
     const [error, setError] = useState(false);
-    const [limit, setLimit] = useState(8);
+    const [limit, setLimit] = useState(9);
     const [skip, setSkip] = useState(0);
     const [size, setSize] = useState(0);
     const [filteredResults, setFilteredResults] = useState([]);
@@ -98,9 +99,9 @@ const Shop = () => {
     return (
         <div className="container-fluid  mt-5">
             <div className="row pt-5">
-                <div className="col-2 card h-50 ml-2">
+                <div className="col-lg-2 card h-50 ml-2">
                     <h4 className="pb-3 card-header">Filter by categories</h4>
-                    <ul className="list-group list-group-flush pl-2">
+                    <ul className="list-group list-group-flush pl-2 pb-2">
                         <Checkbox
                             categories={categories}
                             handleFilters={filters =>
@@ -110,11 +111,15 @@ const Shop = () => {
                     </ul>
                 </div>
 
-                <div className="col-9 ml-5">
-                    <h2 className="mb-4">Products</h2>
+                <div className="col-9 ml-5 mt-4">
+                        <div className="row mb-4 ml-4 mr-3 t1 dusty-grass-gradient">
+                                <div className="col-lg-4 m-auto">
+                                    <h4 style={{fontFamily:"lato",fontWeight:"4000"}} className="animated zoomIn infinite">Products</h4>
+                            </div>
+                    </div>
                     <div className="row">
                         {filteredResults.map((product, i) => (
-                            <div key={i} className="col-4 mb-3">
+                            <div key={i} className="col-lg-4 mb-3">
                                 <Card product={product} />
                             </div>
                         ))}
@@ -123,6 +128,7 @@ const Shop = () => {
                     {loadMoreButton()}
                 </div>
             </div>
+            <Footers />
         </div>
     );
 };

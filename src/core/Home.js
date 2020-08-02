@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Layout from './Layout';
 import {getProducts }from './apiCore';
 import Card from './Card'
+import Footers from './Footers'
 import Search from './Search'
 import "../styles.css"
+import footers from './Footers';
 const Home = () => {
     const [productsBySell, setProductsBySell] = useState([]);
     const [productsByArrival, setProductsByArrival] = useState([]);
@@ -34,10 +36,10 @@ const Home = () => {
         loadProductsBySell();
     }, []);
     return (
-        <div className="container-fluid pb-5 pr-5 cyan-skin">
+        <div className="container-fluid  pr-5 cyan-skin">
             <Search/>
             <div className="row mb-4 ml-3 mr-3 t1 dusty-grass-gradient">
-                <div className="col-4 m-auto ">
+                <div className="col-lg-4 m-auto ">
                         <h4 style={{fontFamily:"lato",fontWeight:"4000"}} className="animated zoomIn infinite">New Arrivals</h4>
                 </div>
             </div>
@@ -50,7 +52,7 @@ const Home = () => {
                 ))}
             </div>
             <div className="row mb-4 ml-4 mr-3 t1 dusty-grass-gradient">
-                <div className="col-4 m-auto">
+                <div className="col-lg-4 m-auto">
                         <h4 style={{fontFamily:"lato",fontWeight:"4000"}} className="animated zoomIn infinite">Best Sellers</h4>
                 </div>
             </div>
@@ -61,6 +63,7 @@ const Home = () => {
                     </div>
                 ))}
             </div>
+            <Footers />
         </div>
     );
 };

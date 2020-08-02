@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter, Redirect } from "react-router-dom";
 import { signout ,isauthenticate} from "../auth";
 import {itemTotal} from './cartHelpers'
 import {MDBIcon}from 'mdbreact'
@@ -12,7 +12,7 @@ const isActive = (history, path) => {
 };
 
 const Menu = ({ history }) => (
-    <div className="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar">
+    <div className="navbar fixed-top navbar-expand navbar-dark pink scrolling-navbar">
             <ul className="navbar-nav mr-auto" >
             <li className="nav-item">
                 <Link
@@ -104,12 +104,12 @@ const Menu = ({ history }) => (
                 </li>
                 )}
         </ul>
-        <ul class="navbar-nav nav-flex-icons">
-        <li class="nav-item">
-          <i class="fas fa-shopping-cart"></i>
+        <ul className="navbar-nav nav-flex-icons">
+        <li className="nav-item">
+            <i className="fas fa-shopping-cart"></i>
         </li>
-        <li class="nav-item">
-          <a class="nav-link"></a>
+        <li className="nav-item">
+          <a className="nav-link"></a>
         </li>
       </ul>
     </div>
