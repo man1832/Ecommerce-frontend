@@ -111,7 +111,7 @@ const Shop = () => {
                     </ul>
                 </div>
 
-                <div className="col-9 ml-5 mt-4">
+                <div className="col-lg-9 ml-5 mt-4">
                         <div className="row mb-4 ml-4 mr-3 t1 dusty-grass-gradient">
                                 <div className="col-lg-4 m-auto">
                                     <h4 style={{fontFamily:"lato",fontWeight:"4000"}} className="animated zoomIn infinite">Products</h4>

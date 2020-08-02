@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getProducts,createOrder } from './apiCore';
 import { emptyCart} from './cartHelpers';
 import Card from './Card';
+import Footers from './Footers'
 import { isauthenticate } from '../auth/index';
 import { Link, Redirect } from 'react-router-dom';
 
@@ -68,7 +69,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
     };
 
     return (
-        <div className="col-10 ml-2">
+        <div className="col-lg-10 ml-2">
             <h2>Total: <i class="fa fa-inr"></i> {getTotal()}</h2>
             {/* {showSuccess()} */}
             {showCheckout()}

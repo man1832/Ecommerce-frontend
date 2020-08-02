@@ -110,7 +110,7 @@ const Menu = ({ history }) => (
         </li>
         {isauthenticate() && (
                 <li className="nav-item">
-                <h5>Signed in {isauthenticate().user.name}</h5>
+                Signed in {isauthenticate().user.name}
               </li>
         )}
       </ul>

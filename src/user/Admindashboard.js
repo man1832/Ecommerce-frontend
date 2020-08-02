@@ -33,10 +33,10 @@ const Personaldetails=()=>{
     return(
             <div className="container">
                 <div className="row mt-5">
-                    <div className="col-3">
+                    <div className="col-lg-3">
                         {Adminlinks()}
                     </div>
-                    <div className="col-9">
+                    <div className="col-lg-9">
                         {Personaldetails()}
                     </div>
 

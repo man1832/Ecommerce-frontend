@@ -54,7 +54,9 @@ const Cart = () => {
                     <hr />
                     <Checkout products={items} setRun={setRun} run={run} />
                 </div>
+               
             </div>
+            <Footers />
         </Layout>
     );
 };

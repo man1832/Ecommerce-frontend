@@ -69,7 +69,7 @@ const Card = ({
             <div className="input-group-prepend">
               <span className="input-group-text">Adjust Quantity</span>
             </div>
-            <input type="number" className="form-control" value={count} onChange={handleChange(product._id)} />
+            <input type="number" className="form-control" value={count} onChange={handleChange(product._id)} style={{ cursor: "pointer", color: "#ffffff" }} />
           </div>
         </div>
       )
@@ -91,7 +91,7 @@ const Card = ({
     );
   };
   return (
-    <div className="card col-12 m-3" style={{maxWidth:"30rem"}}>
+    <div className="card col-lg-12 m-3" style={{maxWidth:"30rem"}}>
       <div className="card-header card-header-1 ">{product.name}</div>
       <div className="card-body">
         {shouldRedirect(redirect)}

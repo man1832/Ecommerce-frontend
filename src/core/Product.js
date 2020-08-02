@@ -43,7 +43,7 @@ const Product = props => {
                 </div>
             </div>
             <div className="row mb-4 ml-3 mr-3 mt-3 t1 dusty-grass-gradient">
-                <div className="col-4 m-auto ">
+                <div className="col-lg-4 m-auto ">
                         <h4 style={{fontFamily:"lato",fontWeight:"4000"}} className="animated zoomIn infinite">Related products</h4>
                 </div>
             </div>

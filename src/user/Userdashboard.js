@@ -30,29 +30,15 @@ const Personaldetails=()=>{
     </div>
     )
 }
-const PurchaseHistory=()=>{
-    return(
-        <div className="card mt-5 h-3">
-                    <h3 className="card-header">
-                        Purchase Information
-                    </h3>
-                    <ul className="list-group">
-                        <li className="list-group-item">
-                            history
-                        </li>
-                    </ul>
-                </div>
-    )
-}
     return(
             <div className="container">
                 <div className="row mt-5">
-                    <div className="col-3">
+                    <div className="col-lg-3">
                         {Userlinks()}
                     </div>
-                    <div className="col-9">
+                    <div className="col-lg-9">
                         {Personaldetails()}
-                        {/* {PurchaseHistory()} */}
+
                     </div>
 
                 </div>
