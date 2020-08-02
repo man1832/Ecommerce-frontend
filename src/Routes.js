@@ -13,6 +13,7 @@ import AddProduct from './admin/Addproduct';
 import Shop from './core/Shop'
 import Product from './core/Product'
 import Cart from './core/Cart'
+import Placed from './core/Placed'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'bootstrap-css-only/css/bootstrap.min.css'
 import 'mdbreact/dist/css/mdb.css'
@@ -26,6 +27,7 @@ const Routes = () => {
                 <Route path="/signup" exact component={Signup} />
                 <Route path="/shop" exact component={Shop} />
                 <Route path="/cart" exact component={Cart} />
+                <Route path="/placed" exact component={Placed} />
                 <Route path="/product/:productId" exact component={Product} />
                 <PrivateRoute path="/user/dashboard" exact component={Userdashboard}/>
                 <AdminRoute path="/admin/dashboard" exact component={Admindashboard}/>

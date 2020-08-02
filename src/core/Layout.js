@@ -1,8 +1,8 @@
 import React from "react";
 import Menu from './Menu'
 const Layout = ({
-    title = "Title",
-    description = "Description",
+    title,
+    description,
     className,
     children
 }) => (
