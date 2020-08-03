@@ -98,8 +98,8 @@ const Shop = () => {
 
     return (
         <div className="container-fluid  mt-5">
-            <div className="row pt-5">
-                <div className="col-lg-2 card h-50 ml-4">
+            <div className="row pt-5 m-auto">
+                <div className="col-lg-2 card h-50 w-auto ">
                     <h4 className="pb-3 card-header">Filter by categories</h4>
                     <ul className="list-group list-group-flush pl-2 pb-2">
                         <Checkbox
@@ -111,8 +111,8 @@ const Shop = () => {
                     </ul>
                 </div>
 
-                <div className="col-lg-9 ml-5 mt-4">
-                        <div className="row mb-4 ml-4 mr-3 t1 dusty-grass-gradient">
+                <div className="col-9 ml-5">
+                        <div className="row mb-4 ml-4 mr-3  mt-3 t1 dusty-grass-gradient">
                                 <div className="col-lg-4 m-auto">
                                     <h4 style={{fontFamily:"lato",fontWeight:"4000"}} className="animated zoomIn infinite">Products</h4>
                             </div>

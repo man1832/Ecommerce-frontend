@@ -89,8 +89,8 @@ const Signin = () => {
 
     return (
         <Layout
-            title="Signin"
-            description="Signin to do your shoping"
+            title="Login"
+            description="Login to do your shopping"
             className="container col-md-8 offset-md-2">
                 {showError()}
                 {showLoading()}

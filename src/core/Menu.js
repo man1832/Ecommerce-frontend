@@ -67,7 +67,23 @@ const Menu = ({ history }) => (
                 </Link>
             </li>
             )}
-               {!isauthenticate() && (
+                
+        </ul>
+        <ul className="navbar-nav nav-flex-icons">
+        {isauthenticate() && (
+                    <li className="nav-item">
+                    <span
+                        className="nav-link"
+                        style={{ cursor: "pointer", color: "#ffffff" }}
+                        onClick={()=>signout(()=>{
+                            history.push('/');
+                        })}
+                        >
+                        Signout
+                    </span>
+                </li>
+                )}
+        {!isauthenticate() && (
                     <Fragment>
                     <li className="nav-item">
                         <Link
@@ -75,7 +91,7 @@ const Menu = ({ history }) => (
                             style={isActive(history, "/signin")}
                             to="/signin"
                         >
-                            Signin
+                            Login
                         </Link>
                     </li>
 
@@ -90,23 +106,8 @@ const Menu = ({ history }) => (
                     </li>
                 </Fragment>
                )}
-                {isauthenticate() && (
-                    <li className="nav-item">
-                    <span
-                        className="nav-link"
-                        style={{ cursor: "pointer", color: "#ffffff" }}
-                        onClick={()=>signout(()=>{
-                            history.push('/');
-                        })}
-                        >
-                        Signout
-                    </span>
-                </li>
-                )}
-        </ul>
-        <ul className="navbar-nav nav-flex-icons">
-        <li className="nav-item">
-            <i className="fas fa-shopping-cart mr-2"></i>
+        <li className="nav-item pt-2">
+            <i className="fas fa-shopping-cart "></i>
         </li>
         {isauthenticate() && (
                 <li className="nav-item">

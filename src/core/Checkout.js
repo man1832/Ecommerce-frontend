@@ -15,7 +15,6 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
         instance: {},
         address: ''
     });
-
     const userId = isauthenticate() && isauthenticate().user._id;
     const token = isauthenticate() && isauthenticate().token;
 
@@ -28,7 +27,6 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
             return currentValue + nextValue.count * nextValue.price;
         }, 0);
     };
-
     const showCheckout = () => {
         return isauthenticate() ? (
         <form>
@@ -50,7 +48,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
         <div className="form-group">
             <label className="text-muted">Address:</label>
             <textarea
-                type="textarea" row="4"
+                type="textarea" row="4" 
                 className="form-control"
             />
         </div>

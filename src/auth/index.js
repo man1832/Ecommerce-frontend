@@ -1,4 +1,5 @@
 import {API} from '../config'
+import Checkbox from '../core/Checkbox';
 export const signup=user=>{
     return fetch(`${API}/signup`,{
         method:"POST",
