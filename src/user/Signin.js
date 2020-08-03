@@ -37,7 +37,7 @@ const Signin = () => {
        
     };
     const showError = () => (
-        <div className="alert alert-danger animated zoomIn" style={{ display: error ? '' : 'none' }}>
+        <div className="alert alert-danger" style={{ display: error ? '' : 'none' }}>
             {error}
         </div>
     );
@@ -57,30 +57,30 @@ const Signin = () => {
             }
         }
     const showLoading= () => (
-       loading && (<div className="alert alert-info animated zoomIn"><h5>Loading</h5></div>)
+       loading && (<div className="alert alert-info"><h5>Loading</h5></div>)
     );
     const signUpForm = () => (
         <form>
             <div className="form-group">
-                <label className="text-muted animated slideInLeft">Email</label>
+                <label className="text-muted">Email</label>
                 <input
                     onChange={handleChange("email")}
                     type="email"
-                    className="form-control animated slideInRight"
+                    className="form-control"
                     value={email}
                 />
             </div>
 
             <div className="form-group">
-                <label className="text-muted animated slideInLeft">Password</label>
+                <label className="text-muted">Password</label>
                 <input
                     onChange={handleChange("password")}
                     type="password"
-                    className="form-control animated slideInRight"
+                    className="form-control"
                     value={password}
                 />
             </div>
-            <button onClick={clickSubmit} className="btn btn-primary animated zoomIn">
+            <button onClick={clickSubmit} className="btn btn-primary">
                 Submit
             </button>
         </form>
@@ -89,8 +89,8 @@ const Signin = () => {
 
     return (
         <Layout
-            title="Login"
-            description="Login to do your shopping"
+            title="Signin"
+            description="Signin to do your shoping"
             className="container col-md-8 offset-md-2">
                 {showError()}
                 {showLoading()}
