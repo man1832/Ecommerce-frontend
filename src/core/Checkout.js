@@ -55,7 +55,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
             />
         </div>
             <Link to="/placed">
-            <button className="btn btn-success btn-block" onClick={()=>emptyCart(()=>{})}
+            <button className="btn btn-success btn-block animated zoomIn" onClick={()=>emptyCart(()=>{})}
              >
                Place Order
             </button>
@@ -63,7 +63,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
             </form>
         ) : (
             <Link to="/signin">
-                <button className="btn btn-primary">Sign in to checkout</button>
+                <button className="btn btn-primary animated zoomIn">Sign in to checkout</button>
             </Link>
         );
     };

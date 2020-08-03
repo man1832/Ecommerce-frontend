@@ -37,7 +37,7 @@ const Signin = () => {
        
     };
     const showError = () => (
-        <div className="alert alert-danger" style={{ display: error ? '' : 'none' }}>
+        <div className="alert alert-danger animated zoomIn" style={{ display: error ? '' : 'none' }}>
             {error}
         </div>
     );
@@ -57,30 +57,30 @@ const Signin = () => {
             }
         }
     const showLoading= () => (
-       loading && (<div className="alert alert-info"><h5>Loading</h5></div>)
+       loading && (<div className="alert alert-info animated zoomIn"><h5>Loading</h5></div>)
     );
     const signUpForm = () => (
         <form>
             <div className="form-group">
-                <label className="text-muted">Email</label>
+                <label className="text-muted animated slideInLeft">Email</label>
                 <input
                     onChange={handleChange("email")}
                     type="email"
-                    className="form-control"
+                    className="form-control animated slideInRight"
                     value={email}
                 />
             </div>
 
             <div className="form-group">
-                <label className="text-muted">Password</label>
+                <label className="text-muted animated slideInLeft">Password</label>
                 <input
                     onChange={handleChange("password")}
                     type="password"
-                    className="form-control"
+                    className="form-control animated slideInRight"
                     value={password}
                 />
             </div>
-            <button onClick={clickSubmit} className="btn btn-primary">
+            <button onClick={clickSubmit} className="btn btn-primary animated zoomIn">
                 Submit
             </button>
         </form>

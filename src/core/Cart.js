@@ -56,7 +56,6 @@ const Cart = () => {
                 </div>
                
             </div>
-            <Footers />
         </Layout>
     );
 };

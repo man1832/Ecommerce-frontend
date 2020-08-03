@@ -5,7 +5,6 @@ import Card from './Card'
 import Footers from './Footers'
 import Search from './Search'
 import "../styles.css"
-import footers from './Footers';
 const Home = () => {
     const [productsBySell, setProductsBySell] = useState([]);
     const [productsByArrival, setProductsByArrival] = useState([]);
@@ -39,7 +38,7 @@ const Home = () => {
         <div className="container-fluid  pr-5 cyan-skin">
             <Search/>
             <div className="row mb-4 ml-3 mr-3 t1 dusty-grass-gradient">
-                <div className="col-lg-4 m-auto ">
+                <div className="col-lg-4 m-auto  animated zoomIn">
                         <h4 style={{fontFamily:"lato",fontWeight:"4000"}} className="animated zoomIn infinite">New Arrivals</h4>
                 </div>
             </div>

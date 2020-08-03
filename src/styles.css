@@ -12,7 +12,7 @@
     border:1.5px solid gainsboro;
 }
 .card:hover{
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .bd{
     border-radius: 6px;
